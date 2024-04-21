@@ -2,11 +2,11 @@ import React, { Suspense } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
-
+import { Toaster } from "@/components/ui/toaster"
 const Home = React.lazy(() => import('./pages/Home'));
 const TenantRight = React.lazy(() => import('./pages/TenantRight/TenantRight'));
 const ResourcesAndNews = React.lazy(() => import('./pages/ResourcesAndNews./ResourcesAndNews'))
-const ContactUs = React.lazy(() => import('./pages/ContactUs'));
+const ContactUs = React.lazy(() => import('./pages/ContactUs/ContactUs'));
 
 function App() {
   return (
@@ -23,6 +23,7 @@ function App() {
           </Routes>
         </Suspense>
         <Footer />
+        <Toaster />
       </BrowserRouter>
     </>
   );
