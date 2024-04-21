@@ -13,9 +13,12 @@ const Navbar = () => {
                         <Link to={'/'} className='hover:text-blue-500 p-4'>Home</Link>
                     </li>
                     <li>
-                        <Link href="/tenant-right" className='hover:text-blue-500 p-4'>
-                            Resourses
-                        </Link>
+                        <Link to={'/resources-and-news'} className='hover:text-blue-500 p-4'>Resources</Link>
+
+                    </li>
+                    <li>
+                        <Link to={'/tenant-right'} className='hover:text-blue-500 p-4'>Tenant Right</Link>
+
                     </li>
                     <li>
                         <ContactUsButton />

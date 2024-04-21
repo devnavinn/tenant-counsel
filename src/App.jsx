@@ -5,7 +5,7 @@ import Footer from './components/Footer';
 
 const Home = React.lazy(() => import('./pages/Home'));
 const TenantRight = React.lazy(() => import('./pages/TenantRight/TenantRight'));
-const ResourcesAndNews = React.lazy(() => import('./pages/ResourcesAndNews'));
+const ResourcesAndNews = React.lazy(() => import('./pages/ResourcesAndNews./ResourcesAndNews'))
 const ContactUs = React.lazy(() => import('./pages/ContactUs'));
 
 function App() {
