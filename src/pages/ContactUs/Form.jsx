@@ -35,19 +35,28 @@ const Form = () => {
                 <div className='flex flex-col space-y-5'>
                     <div className='flex flex-col'>
                         <label id='name' >Name</label>
-                        <input type='text'
+                        <input
+                            required
+                            name="name"
+                            type='text'
                             className='border-b border-gray-300 p-2 outline-none'
                         />
                     </div>
                     <div className='flex flex-col'>
-                        <label id='email' >Phone Number</label>
-                        <input type='email'
+                        <label id='phone' >Phone Number</label>
+                        <input
+                            required
+                            type='phone'
+                            name="phone"
                             className='border-b border-gray-300 p-2 outline-none'
                         />
                     </div>
                     <div className='flex flex-col'>
                         <label id='email' >Email</label>
-                        <input type='email'
+                        <input
+                            required
+                            name="email"
+                            type='email'
                             className='border-b border-gray-300 p-2 outline-none'
                         />
                     </div>
@@ -55,6 +64,8 @@ const Form = () => {
                     <div className='flex flex-col'>
                         <label id='message' >Message</label>
                         <textarea
+                            name='message'
+                            required
                             className='border-b border-gray-300 p-2 outline-none'
                             rows={4}
                         />
