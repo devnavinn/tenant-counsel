@@ -5,11 +5,11 @@ const Form = () => {
         event.preventDefault();
         const formData = new FormData(event.target);
 
-        formData.append("access_key", "YOUR_ACCESS_KEY_HERE");
+        formData.append("access_key", "5f634db9-51a6-4da7-b10a-80ba2f2f60de");
 
         const object = Object.fromEntries(formData);
         const json = JSON.stringify(object);
-
+        console.log('form', json);
         const res = await fetch("https://api.web3forms.com/submit", {
             method: "POST",
             headers: {
@@ -20,6 +20,7 @@ const Form = () => {
         }).then((res) => res.json());
 
         if (res.success) {
+
             toast({
                 title: "Form sent successfully!",
                 message: "We have received your message and will get back to you shortly!",
