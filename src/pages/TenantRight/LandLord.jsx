@@ -2,7 +2,7 @@ import img from '../../assets/tenant-right/img4.png';
 import icon from '../../assets/tenant-right/icon4.png';
 import pattern from '../../assets/pattern.png';
 import List from './List';
-
+import { motion } from 'framer-motion';
 const list = [
     "Excessively contacting or visiting your home during non-business hours without permission or warning.",
     "Making repeated buy-out offers.",
@@ -14,7 +14,14 @@ const list = [
 
 const LandLord = () => {
     return (
-        <div className="max-w-6xl h-screen mx-auto flex flex-col lg:flex-row justify-center items-center gap-10"
+        <motion.div className="max-w-6xl min-h-screen mx-auto flex flex-col lg:flex-row justify-center items-center gap-10 overflow-hidden"
+            initial={{ opacity: 0.0, y: 40 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{
+                delay: 0.3,
+                duration: 0.8,
+                ease: "easeInOut",
+            }}
             style={{
                 backgroundImage: `url(${pattern})`,
             }}
@@ -22,11 +29,11 @@ const LandLord = () => {
             <div className="flex-1 flex justify-center items-center h-[35rem]">
                 <img src={img} className='w-full h-full object-cover rounded-lg overflow-hidden' alt="LandLord" />
             </div>
-            <div className="w-3/5 flex flex-col justify-center ">
+            <div className="w-full md:w-3/5 flex flex-col justify-center ">
                 <div className='w-14 h-14'>
                     <img className='w-full h-full' src={icon} alt={"LandLord"} />
                 </div>
-                <h1 className='text-5xl font-medium mt-5'>Landlord <br /> Harrasment</h1>
+                <h1 className='text-4xl md:text-5xl font-medium mt-5'>Landlord <br /> Harrasment</h1>
                 <p className='leading-snug text-gray-700 py-5'>
                     Landlord harassment is prohibited by NYC law. Some landlord behaviors that count as harassment include:
                 </p>
@@ -42,7 +49,7 @@ const LandLord = () => {
 
                 </ul>
             </div>
-        </div>
+        </motion.div>
     );
 };
 

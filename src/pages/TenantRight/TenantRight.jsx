@@ -44,7 +44,7 @@ const TenantRight = () => {
                     Disability Protections
                 </li>
             </ul> */}
-            <div className="px-5">
+            <div className="px-5 flex flex-col space-y-10">
                 <Illegal />
                 <Discrimination />
                 <DisabilitProtection />

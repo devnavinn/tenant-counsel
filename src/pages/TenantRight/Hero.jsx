@@ -3,7 +3,7 @@ import shapeHero from '../../assets/tenright-hs.png'
 import { motion } from "framer-motion";
 const Hero = () => {
     return (
-        <div className='w-full h-[26rem] relative overflow-hidden'
+        <div className='w-full h-[26rem] relative overflow-hidden mb-10'
 
         >
             <div
@@ -33,7 +33,7 @@ const Hero = () => {
                     ease: "easeInOut",
                 }}
                 className='w-full h-full flex flex-col justify-center p-5 md:p-14 lg:p-20 text-[#FFFFFF]'>
-                <h1 className='text-5xl font-semibold text-[#FFFFFF] leading-snug z-10'>Tenant Rights</h1>
+                <h1 className='text-4xl md:text-5xl font-semibold text-[#FFFFFF] leading-snug z-10'>Tenant Rights</h1>
                 <p className='text-[#FFFFFF] opacity-65 z-10'>Know your rights and stay up to date on the latest news</p>
             </motion.div>
         </div>

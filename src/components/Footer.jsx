@@ -7,7 +7,7 @@ const Footer = () => {
                 <img src={logo} alt="logo" className='w-full h-full' />
             </Link>
             <div>
-                <p>© 2023 Tenant Counsel Network. All Rights Reserved.</p>
+                <p className='text-gray-500'>© 2023 Tenant Counsel Network. All Rights Reserved.</p>
             </div>
         </footer>
     )
