@@ -9,7 +9,7 @@ const Home = () => {
             className="overflow-hidden"
         >
             <Hero />
-            <div className="px-5">
+            <div className="px-5 flex flex-col gap-10">
                 <WhyWeAre />
                 <Demo />
                 <Support />

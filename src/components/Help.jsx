@@ -12,7 +12,7 @@ const Help = () => {
                 ease: "easeInOut",
             }}
 
-            className="max-w-6xl mx-auto h-full rounded-lg relative  flex flex-col md:flex-row justify-between items-center bg-[#123073] p-10"
+            className="max-w-6xl mx-auto h-full rounded-lg relative  flex flex-col md:flex-row gap-5 justify-between items-center bg-[#123073] p-10"
         >
             <div
                 className="absolute inset-0 z-10 bg-no-repeat bg-cover bg-center"

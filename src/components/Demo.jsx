@@ -4,13 +4,12 @@ import { motion } from 'framer-motion'
 const Demo = () => {
     return (
         <div
-            className='w-full h-full flex justify-center items-center'
+            className='w-full h-full min-h-screen flex justify-center items-center overflow-hidden'
             style={{
                 backgroundImage: `url(${pattern})`,
-                height: `100vh`
             }}
         >
-            <motion.div className='max-w-6xl mx-auto grid md:grid-cols-2 gap-10 '
+            <motion.div className='max-w-6xl w-full h-full mx-auto grid md:grid-cols-2 gap-5 lg:gap-10 '
                 initial={{ opacity: 0.0, y: 40 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{
@@ -20,11 +19,11 @@ const Demo = () => {
                 }}
             >
                 <div className='w-full'>
-                    <img src={demo} alt="demo" className='w-full h-full' />
+                    <img src={demo} alt="demo" className='w-full h-full object-cover' />
                 </div>
                 <div className=' flex flex-col justify-center '>
-                    <h1 className='text-5xl font-semibold  leading-tight'>
-                        <span className='text-red-500'>Fighting Eviction </span> and <br />
+                    <h1 className='text-4xl md:text-5xl font-semibold  leading-tight'>
+                        <span className='text-red-500'>Fighting Eviction </span> and
                         Homelessness in NYC
                     </h1>
                     <p className='text-gray-700 text-base leading-snug mt-2'>
