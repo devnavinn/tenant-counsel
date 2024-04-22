@@ -96,18 +96,26 @@ const MobileMenu = ({ isMobileMenuOpen, toggleMobileMenu }) => {
                 >
                     <div className="p-4">
                         <ul className='flex flex-col items-center space-y-5 p-4'>
-                            <li>
+                            <li
+                                onClick={toggleMobileMenu}
+                            >
                                 <Link to={'/'} className='hover:text-blue-500 p-4'>Home</Link>
                             </li>
-                            <li>
+                            <li
+                                onClick={toggleMobileMenu}
+                            >
                                 <Link to={'/resources-and-news'} className='hover:text-blue-500 p-4'>Resources</Link>
 
                             </li>
-                            <li>
+                            <li
+                                onClick={toggleMobileMenu}
+                            >
                                 <Link to={'/tenant-right'} className='hover:text-blue-500 p-4'>Tenant Right</Link>
 
                             </li>
-                            <li>
+                            <li
+                                onClick={toggleMobileMenu}
+                            >
                                 <ContactUsButton
                                     buttonName={'Contact Us'}
                                     link={'/contact-us'}
