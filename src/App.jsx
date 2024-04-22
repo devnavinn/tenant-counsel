@@ -1,5 +1,5 @@
 import React, { Suspense } from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Loading from './components/Loading';
@@ -20,7 +20,7 @@ function App() {
             <Route path="/tenant-right" element={<TenantRight />} />
             <Route path="/resources-and-news" element={<ResourcesAndNews />} />
             <Route path="/contact-us" element={<ContactUs />} />
-            <Route path="*" element={<h1>Not Found</h1>} />
+            <Route path="*" element={<Navigate to="/" />} />
           </Routes>
           <Footer />
         </Suspense>
