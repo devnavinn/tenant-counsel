@@ -14,7 +14,8 @@ const Hero = () => {
             <div className='absolute left-0 bottom-0 bg-no-repeat bg-contain' style={{ background: `url(${shapeHero})`, opacity: '1' }} />
             <motion.div initial={{ opacity: 0.0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} transition={{ delay: 0.3, duration: 0.8, ease: "easeInOut" }} className='flex flex-col p-5 sm:p-7 md:p-14 lg:p-24 text-[#FFFFFF]'>
                 <h1 className='text-5xl opacity-65 font-normal leading-snug md:text-5xl lg:text-6xl'>Protecting Tenants with Tenacious and </h1>
-                <h1 className='text-5xl font-semibold md:text-5xl lg:text-6xl leading-snug'>Affordable Defense</h1>
+                <h1 className='text-5xl font-semibold md:text-5xl lg:text-6xl leading-snug
+                mt-2 md:mt-5'>Affordable Defense</h1>
                 <div className='flex flex-col space-y-2  sm:space-y-4 py-5 mt-10'>
                     {heroInfo.map((info, index) => (
                         <List key={index} info={info} />
