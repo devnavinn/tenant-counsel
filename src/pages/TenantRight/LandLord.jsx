@@ -14,7 +14,7 @@ const list = [
 
 const LandLord = () => {
     return (
-        <motion.div className="max-w-6xl min-h-screen mx-auto flex flex-col lg:flex-row justify-center items-center gap-10 overflow-hidden"
+        <motion.div className="max-w-6xl min-h-screen mx-auto flex flex-col md:flex-row justify-center items-center gap-10 overflow-hidden"
             initial={{ opacity: 0.0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{

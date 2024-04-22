@@ -74,9 +74,6 @@ const TenantRight = () => {
                 <div ref={rentRef}>
                     <RentStabilation />
                 </div>
-                <div ref={rentRef}>
-                    <RentStabilation />
-                </div>
                 <Help />
             </div>
         </>
