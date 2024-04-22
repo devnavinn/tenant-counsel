@@ -1,10 +1,10 @@
 import { Link } from "react-router-dom"
 import { ChevronRight } from 'lucide-react'
-const ContactUsButton = () => {
+const ContactUsButton = ({ buttonName, link }) => {
     return (
-        <Link to="contact-us" className='w-32 z-10  h-10 flex justify-between items-center bg-[#E63946] text-white p-2 rounded-lg'>
-            Contact Us
-            <ChevronRight />
+        <Link to={link} className='z-10  flex justify-between items-center bg-[#E63946] text-white rounded-lg relative py-2 pr-12 pl-2'>
+            {buttonName}
+            <span className="absolute right-2 top-2"> <ChevronRight /></span>
         </Link>
     )
 }

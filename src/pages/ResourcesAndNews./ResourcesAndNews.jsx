@@ -10,7 +10,7 @@ const ResourcesAndNews = () => {
     return (
         <>
             <Hero />
-            <div className="px-5">
+            <div className="px-5 flex flex-col space-y-10">
                 <SportLight />
                 <News2 />
                 <News3 />

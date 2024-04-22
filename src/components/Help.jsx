@@ -12,7 +12,7 @@ const Help = () => {
                 ease: "easeInOut",
             }}
 
-            className="max-w-6xl mx-auto h-full rounded-lg relative  flex flex-col md:flex-row gap-5 justify-between items-center bg-[#123073] p-10"
+            className="max-w-6xl w-full mx-auto h-full rounded-lg relative  flex flex-col md:flex-row gap-5 justify-between items-center bg-[#123073] p-10"
         >
             <div
                 className="absolute inset-0 z-10 bg-no-repeat bg-cover bg-center"
@@ -25,7 +25,10 @@ const Help = () => {
                 <h1 className="text-5xl text-[#FFFFFF] font-semibold">Help Us Help YOU!</h1>
                 <h2 className="text-3xl text-[#FFFFFF] font-semibold mt-5">Contact us now to secure the legal defense you deserve.</h2>
             </div>
-            <ContactUsButton />
+            <ContactUsButton
+                buttonName={'Contact Us'}
+                link={'/contact-us'}
+            />
 
         </motion.div>
     )

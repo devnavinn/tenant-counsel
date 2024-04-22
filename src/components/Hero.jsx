@@ -21,7 +21,10 @@ const Hero = () => {
                     ))}
                 </div>
                 <div className='flex flex-row space-x-5 mt-5'>
-                    <ContactUsButton />
+                    <ContactUsButton
+                        buttonName={'Contact Us'}
+                        link={'/contact-us'}
+                    />
                     <div className='flex space-x-2 justify-center items-center'>
                         <PhoneCall />
                         <div>

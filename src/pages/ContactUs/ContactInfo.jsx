@@ -24,10 +24,13 @@ const ContactInfo = () => {
                 support@tenantcounselnetwork.com
             </div>
             <div className='mt-10'>
-                <h1 className='text-4xl font-semibold text-[#FFFFFF] '>Refer us to a friend!</h1>
+                <h1 className=' text-2xl md:text-4xl font-semibold text-[#FFFFFF] '>Refer us to a friend!</h1>
                 <p className='text-[#C9C9C9] py-5'>Reach out to us today – because your home is worth fighting for, and we're here to stand with you every step of the way. Contact us now to secure the legal defense you deserve.</p>
             </div>
-            <ContactUsButton />
+            <ContactUsButton
+                buttonName={'Share Us'}
+                link={'#'}
+            />
         </div>
     )
 }

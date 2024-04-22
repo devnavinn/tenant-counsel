@@ -3,7 +3,7 @@ import shapeHero from '../../assets/tenright-hs.png'
 import { motion } from "framer-motion";
 const Hero = () => {
     return (
-        <div className='w-full h-[26rem] relative overflow-hidden'
+        <div className='w-full h-[26rem] relative overflow-hidden mb-10'
 
         >
             <div

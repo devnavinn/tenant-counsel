@@ -22,8 +22,8 @@ const Form = () => {
         if (res.success) {
 
             toast({
-                title: "Form sent successfully!",
-                message: "We have received your message and will get back to you shortly!",
+                title: "Thank you for contacting us",
+                description: "We have received your message and will get back to you shortly!",
                 type: "success"
             });
         }

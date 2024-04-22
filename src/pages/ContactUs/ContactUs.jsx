@@ -6,7 +6,7 @@ const ContactUs = () => {
         <>
             <Hero />
             <div className="px-5">
-                <div className="max-w-6xl mx-auto w-full grid grid-cols-2 mt-10 gap-5">
+                <div className="max-w-6xl mx-auto w-full grid grid-cols-1 md:grid-cols-2 mt-10 gap-5">
                     <Form />
                     <ContactInfo />
                 </div>

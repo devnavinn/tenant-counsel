@@ -28,7 +28,10 @@ const Navbar = () => {
 
                     </li>
                     <li>
-                        <ContactUsButton />
+                        <ContactUsButton
+                            buttonName='Contact Us'
+                            link='/contact-us'
+                        />
                     </li>
                 </ul>
                 <div
@@ -87,7 +90,10 @@ const MobileMenu = ({ isMobileMenuOpen, toggleMobileMenu }) => {
 
                             </li>
                             <li>
-                                <ContactUsButton />
+                                <ContactUsButton
+                                    buttonName={'Contact Us'}
+                                    link={'/contact-us'}
+                                />
                             </li>
                         </ul>
                     </div>
