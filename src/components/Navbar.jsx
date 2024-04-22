@@ -2,6 +2,17 @@ import { useState } from 'react'
 import ContactUsButton from './ContactUsButton'
 import logo from './../assets/logo.svg'
 import { Link } from 'react-router-dom'
+import {
+    NavigationMenu,
+    NavigationMenuContent,
+    NavigationMenuIndicator,
+    NavigationMenuItem,
+    NavigationMenuLink,
+    NavigationMenuList,
+    NavigationMenuTrigger,
+    NavigationMenuViewport,
+} from "@/components/ui/navigation-menu"
+
 import { motion, AnimatePresence } from 'framer-motion';
 const Navbar = () => {
     const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -19,14 +30,21 @@ const Navbar = () => {
                     <li>
                         <Link to={'/'} className='hover:text-blue-500 p-4'>Home</Link>
                     </li>
-                    <li>
-                        <Link to={'/resources-and-news'} className='hover:text-blue-500 p-4'>Resources</Link>
-
-                    </li>
-                    <li>
-                        <Link to={'/tenant-right'} className='hover:text-blue-500 p-4'>Tenant Right</Link>
-
-                    </li>
+                    <NavigationMenu>
+                        <NavigationMenuList>
+                            <NavigationMenuItem>
+                                <NavigationMenuTrigger>Resources</NavigationMenuTrigger>
+                                <NavigationMenuContent className='flex flex-col'>
+                                    <NavigationMenuLink asChild>
+                                        <Link to={'/resources-and-news'} className='hover:text-blue-500 p-4'>Resources</Link>
+                                    </NavigationMenuLink>
+                                    <NavigationMenuLink asChild>
+                                        <Link to={'/tenant-right'} className='hover:text-blue-500 p-4 whitespace-nowrap'>Tenant Right</Link>
+                                    </NavigationMenuLink>
+                                </NavigationMenuContent>
+                            </NavigationMenuItem>
+                        </NavigationMenuList>
+                    </NavigationMenu>
                     <li>
                         <ContactUsButton
                             buttonName='Contact Us'

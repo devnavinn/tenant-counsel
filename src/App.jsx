@@ -2,6 +2,7 @@ import React, { Suspense } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
+import Loading from './components/Loading';
 import { Toaster } from "@/components/ui/toaster"
 const Home = React.lazy(() => import('./pages/Home'));
 const TenantRight = React.lazy(() => import('./pages/TenantRight/TenantRight'));
@@ -12,8 +13,8 @@ function App() {
   return (
     <>
       <BrowserRouter>
-        <Navbar />
-        <Suspense fallback={<div>Loading...</div>}>
+        <Suspense fallback={<Loading />}>
+          <Navbar />
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/tenant-right" element={<TenantRight />} />
@@ -21,8 +22,8 @@ function App() {
             <Route path="/contact-us" element={<ContactUs />} />
             <Route path="*" element={<h1>Not Found</h1>} />
           </Routes>
+          <Footer />
         </Suspense>
-        <Footer />
         <Toaster />
       </BrowserRouter>
     </>
