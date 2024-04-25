@@ -12,7 +12,7 @@ const News3 = () => {
                     <span>5 min ago</span>
                     <h1 className='max-sm:text-xl sm:text-3xl md:text-5xl text-gray-700 font-light py-2 md:py-5 leading-1'>
                         Mayor Adams' Public Engagement Unit hits streets to inform...</h1>
-                    <a href='' className='text-red-500'>Read more</a>
+                    <a target='_blank' href='https://www.cbsnews.com/newyork/news/mayor-adams-public-engagement-unit-hits-streets-to-inform-tenants-of-their-rights-in-face-of-illegal-evictions/' className='text-red-500'>Read more</a>
                 </div>
             </div>
         </motion.div>

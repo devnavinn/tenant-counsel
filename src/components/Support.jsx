@@ -28,9 +28,9 @@ const Support = () => {
                     <h1 className='text-4xl md:text-5xl   font-semibold leading-snug'>
                         Does Your Landlord Take <br /> Your Cash but Not Your <br /> Complaints?
                     </h1>
-                    <p className='py-5 leading-snug  opacity-65'>our landlord wants you to believe there’s no way out. There are no dead-ends when it comes to protecting our clients because there are no single solution cases. At Tenant Counsel Network, we approach all of our cases with a multi-faceted strategy, we empower renters to raise legitimate objections against their landlord’s unlawful behavior. Our aim is to uphold tenants’ rights and hold landlords accountable through an array of rental disputes, including those related to:</p>
+                    <p className='py-5 leading-snug  opacity-65'>Your landlord wants you to believe there’s no way out. There are no dead-ends when it comes to protecting our clients because there are no single solution cases. At Tenant Counsel Network, we approach all of our cases with a multi-faceted strategy, we empower renters to raise legitimate objections against their landlord’s unlawful behavior. Our aim is to uphold tenants’ rights and hold landlords accountable through an array of rental disputes, including those related to:</p>
                     <p className='leading-snug opacity-65'>
-                        our landlord wants you to believe there’s no way out. There are no dead-ends when it comes to protecting our clients because there are no single solution cases. At Tenant Counsel Network, we approach all of our cases with a multi-faceted strategy, we empower renters to raise legitimate objections against their landlord’s unlawful behavior. Our aim is to uphold tenants’ rights and hold landlords accountable through an array of rental disputes, including those related to:
+                        While landlords have substantial control of their properties, their noncompliance with the federal, state and local laws governing leased properties could lead to penalties and even lawsuits. Our attorneys will expertly litigate on matters like property conditions, habitability complaints and other violations of your leasing agreement, in pursuit of settling your case and fighting your eviction.
                     </p>
                 </div>
                 <div className=' flex-1 flex items-end'>
@@ -53,7 +53,7 @@ const List = ({ info }) => {
         <div className='flex items-center space-x-5 font-medium'>
             <CircleCheck
                 size={24}
-                className='text-red-500'
+                className='text-red-500 shrink-0'
             />
             <p>{info}</p>
         </div>

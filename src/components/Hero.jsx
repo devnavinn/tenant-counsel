@@ -26,13 +26,13 @@ const Hero = () => {
                         buttonName={'Contact Us'}
                         link={'/contact-us'}
                     />
-                    <div className='flex space-x-2 justify-center items-center'>
+                    <a href="tel:+19172773509" className='flex space-x-2 justify-center items-center z-20'>
                         <PhoneCall />
                         <div>
-                            <p className='text-gray-400 text-sm'>Call us at</p>
-                            <a href="tel:+19172773509">+1 (917) 277-3509</a>
+                            <span className='text-gray-400 text-sm'>Call us at</span><br />
+                            <span>+1 (917) 277-3509</span>
                         </div>
-                    </div>
+                    </a>
                 </div>
             </motion.div>
         </div>

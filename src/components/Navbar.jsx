@@ -1,18 +1,7 @@
 import { useState } from 'react'
 import ContactUsButton from './ContactUsButton'
-import logo from './../assets/logo.svg'
+import logo from './../assets/logo.png'
 import { Link } from 'react-router-dom'
-import {
-    NavigationMenu,
-    NavigationMenuContent,
-    NavigationMenuIndicator,
-    NavigationMenuItem,
-    NavigationMenuLink,
-    NavigationMenuList,
-    NavigationMenuTrigger,
-    NavigationMenuViewport,
-} from "@/components/ui/navigation-menu"
-
 import { motion, AnimatePresence } from 'framer-motion';
 const Navbar = () => {
     const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -21,30 +10,23 @@ const Navbar = () => {
         setMobileMenuOpen(!isMobileMenuOpen);
     };
     return (
-        <header className="bg-white shadow sticky top-0 z-20 inset-x-0">
+        <header className="bg-white shadow sticky top-0 z-30 inset-x-0">
             <nav className='flex justify-between px-10 py-2' >
-                <Link to={'/'} className='flex items-center w-16 h-16 '>
+                <Link to={'/'} className='flex items-center w-16 h-16 sm:w-20 sm:h-20 '>
                     <img src={logo} alt="logo" className='w-full h-full' />
                 </Link>
                 <ul className=' hidden md:flex items-center space-x-5 p-4'>
                     <li>
                         <Link to={'/'} className='hover:text-blue-500 p-4'>Home</Link>
                     </li>
-                    <NavigationMenu>
-                        <NavigationMenuList>
-                            <NavigationMenuItem>
-                                <NavigationMenuTrigger>Resources</NavigationMenuTrigger>
-                                <NavigationMenuContent className='flex flex-col'>
-                                    <NavigationMenuLink asChild>
-                                        <Link to={'/resources-and-news'} className='hover:text-blue-500 p-4'>Resources</Link>
-                                    </NavigationMenuLink>
-                                    <NavigationMenuLink asChild>
-                                        <Link to={'/tenant-right'} className='hover:text-blue-500 p-4 whitespace-nowrap'>Tenant Right</Link>
-                                    </NavigationMenuLink>
-                                </NavigationMenuContent>
-                            </NavigationMenuItem>
-                        </NavigationMenuList>
-                    </NavigationMenu>
+
+                    <li>
+                        <Link to={'/tenant-right'} className='hover:text-blue-500 p-4 whitespace-nowrap'>Know Your Rights
+                        </Link>
+                    </li>
+                    <li>
+                        <Link to={'/resources-and-news'} className='hover:text-blue-500 p-4'>Resources</Link>
+                    </li>
                     <li>
                         <ContactUsButton
                             buttonName='Contact Us'
@@ -54,7 +36,7 @@ const Navbar = () => {
                 </ul>
                 <div
                     onClick={toggleMobileMenu}
-                    className="md:hidden flex items-center">
+                    className="md:hidden flex items-center z-30">
                     <button
                         className="outline-none mobile-menu-button">
                         <svg

@@ -18,7 +18,7 @@ const News4 = () => {
                 <div className='max-w-md absolute bottom-0 right-0 md:top-[35%] md:left-[10%] p-3 md:p-7 rounded-lg shadow-lg bg-white '>
                     <span>5 min ago</span>
                     <h1 className='max-sm:text-xl sm:text-3xl md:text-5xl text-gray-700 font-light py-2 md:py-5 leading-1'>Eric Adams’ State of the City: What’s in it for Housing?</h1>
-                    <a href='' className='text-red-500'>Read more</a>
+                    <a target='_blank' href='https://citylimits.org/2024/01/24/eric-adams-state-of-the-city-whats-in-it-for-housing/' className='text-red-500'>Read more</a>
                 </div>
             </div>
         </motion.div>

@@ -5,8 +5,13 @@ import News4 from "./News4"
 import News5 from "./News5"
 import Help from "../../components/Help"
 import SportLight from "./SportLight"
-
+import { useEffect } from "react"
 const ResourcesAndNews = () => {
+    useEffect(() => {
+        window.scrollTo(0, 0)
+        window.title = "Resources and News - Tenant Counsel Network"
+        window.description = "Stay up-to-date with the latest news and resources from Tenant Counsel Network. Learn more about your rights as a tenant and how we can help you secure the legal defense you deserve."
+    }, [])
     return (
         <>
             <Hero />

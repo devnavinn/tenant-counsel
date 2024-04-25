@@ -10,8 +10,14 @@ import HeatAndHot from "./HeatAndHot";
 import SafteyAndRepair from "./SafteyAndRepair";
 import RentStabilation from "./RentStabilation";
 import Help from "../../components/Help";
+import { useEffect } from "react";
 const TenantRight = () => {
-    const homeRef = useRef(null);
+    useEffect(() => {
+        window.scrollTo(0, 0)
+        window.title = "Tenant Rights - Tenant Counsel Network"
+        window.description = "Learn more about your rights as a tenant in New York City. Tenant Counsel Network is here to help you secure the legal defense you deserve."
+    }, [])
+
     const illegalRef = useRef(null);
     const landlordRef = useRef(null);
     const heatRef = useRef(null);

@@ -1,6 +1,6 @@
 import { motion } from "framer-motion"
 import ContactUsButton from "./ContactUsButton"
-import helpImg from './../assets/help.png'
+import helpImg from './../assets/bg-contact.png'
 const Help = () => {
     return (
         <motion.div
@@ -11,24 +11,22 @@ const Help = () => {
                 duration: 0.8,
                 ease: "easeInOut",
             }}
-
-            className="max-w-6xl w-full mx-auto h-full rounded-lg relative  flex flex-col md:flex-row gap-5 justify-between items-center bg-[#123073] p-10"
+            style={{
+                backgroundImage: `url(${helpImg})`,
+                backgroundSize: '10rem',
+                opacity: '0.1'
+            }}
+            className="max-w-6xl w-full bg-repeat bg-center mx-auto h-96 rounded-lg relative  flex flex-col md:flex-row gap-5 justify-center items-center bg-[#123073] p-5"
         >
-            <div
-                className="absolute inset-0 z-10 bg-no-repeat bg-cover bg-center"
-                style={{
-                    backgroundImage: `url(${helpImg})`,
-                    opacity: '0.1'
-                }}
-            />
-            <div>
-                <h1 className="text-5xl text-[#FFFFFF] font-semibold">Help Us Help YOU!</h1>
-                <h2 className="text-3xl text-[#FFFFFF] font-semibold mt-5">Contact us now to secure the legal defense you deserve.</h2>
+            <div className="flex flex-col items-center justify-center ">
+                <h1 className="text-4xl text-[#E63946] font-semibold text-center">Help Us Help YOU!</h1>
+                <p className="text-2xl text-center text-[#FFFFFF] opacity-75 font-semibold my-5 md:my-10">Contact us now to secure the legal defense you deserve.</p>
+                <ContactUsButton
+                    buttonName={'Contact Us'}
+                    link={'/contact-us'}
+                />
             </div>
-            <ContactUsButton
-                buttonName={'Contact Us'}
-                link={'/contact-us'}
-            />
+
 
         </motion.div>
     )

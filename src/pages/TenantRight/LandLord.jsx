@@ -33,7 +33,7 @@ const LandLord = () => {
                 <div className='w-14 h-14'>
                     <img className='w-full h-full' src={icon} alt={"LandLord"} />
                 </div>
-                <h1 className='text-4xl md:text-5xl font-medium mt-5'>Landlord <br /> Harrasment</h1>
+                <h1 className='text-4xl md:text-5xl font-medium mt-5'>Landlord <br />  Harassment</h1>
                 <p className='leading-snug text-gray-700 py-5'>
                     Landlord harassment is prohibited by NYC law. Some landlord behaviors that count as harassment include:
                 </p>

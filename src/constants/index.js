@@ -1,8 +1,8 @@
 export const heroInfo = [
-    "The years of experience the lawyer has + years of experience",
+    "Professional and experienced attorneys to defend you",
     "Thousands of Dollars of overcharges recovered",
     "Clients just like you represented throughout New York",
-    "Hire a lawyer whose got your back, not your wallet”"
+    "Hire a lawyer whose got your back, not your wallet"
 ]
 import pactice from '../assets/practice.svg'
 import pricing from '../assets/pricing.svg'

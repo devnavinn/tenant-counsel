@@ -19,7 +19,7 @@ const News5 = () => {
                     <span>5 min ago</span>
                     <h1 className='max-sm:text-xl sm:text-3xl md:text-5xl text-gray-700 font-light py-2 md:py-5 leading-1'>
                         Half of US tenants can’t afford to pay their rent...</h1>
-                    <a href='' className='text-red-500'>Read more</a>
+                    <a target='_blank' href='https://citylimits.org/2024/01/24/eric-adams-state-of-the-city-whats-in-it-for-housing/' className='text-red-500'>Read more</a>
                 </div>
             </div>
         </motion.div>
