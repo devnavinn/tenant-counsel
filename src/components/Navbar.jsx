@@ -10,6 +10,7 @@ const Navbar = () => {
         setMobileMenuOpen(!isMobileMenuOpen);
     };
 
+
     useEffect(() => {
         if (isMobileMenuOpen) {
             document.body.style.overflow = 'hidden';
@@ -50,9 +51,11 @@ const Navbar = () => {
 
 
     return (
-        <header className="bg-white shadow sticky top-0 z-30 inset-x-0">
+        <header className="bg-white shadow sticky top-0 z-30 inset-x-0"
+            ref={menuRef}
+        >
             <nav className='flex justify-between px-10 py-2'
-                ref={menuRef}
+
             >
                 <Link to={'/'} className='flex items-center w-16 h-16 sm:w-20 sm:h-20 '>
                     <img src={logo} alt="logo" className='w-full h-full' />
@@ -109,6 +112,7 @@ const Navbar = () => {
 export default Navbar
 
 const MobileMenu = ({ isMobileMenuOpen, toggleMobileMenu, menuRef }) => {
+
     return (
         <AnimatePresence>
             {isMobileMenuOpen && (

@@ -14,7 +14,7 @@ const list = [
 
 const LandLord = () => {
     return (
-        <motion.div className="max-w-6xl min-h-screen mx-auto flex flex-col md:flex-row justify-center items-center gap-10 overflow-hidden"
+        <motion.div className="max-w-6xl min-h-screen mx-auto flex flex-col lg:flex-row justify-center items-center gap-10 overflow-hidden"
             initial={{ opacity: 0.0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{
@@ -29,7 +29,7 @@ const LandLord = () => {
             <div className="flex-1 flex justify-center items-center h-[35rem]">
                 <img src={img} className='w-full h-full object-cover rounded-lg overflow-hidden' alt="LandLord" />
             </div>
-            <div className="w-full md:w-3/5 flex flex-col justify-center ">
+            <div className="w-full lg:w-3/5 flex flex-col justify-center ">
                 <div className='w-14 h-14'>
                     <img className='w-full h-full' src={icon} alt={"LandLord"} />
                 </div>
