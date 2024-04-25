@@ -36,7 +36,9 @@ const ContactInfo = () => {
             </a>
 
             <div className='flex items-center gap-2 text-[#C9C9C9]'>
-                <Mail />
+                <Mail
+                    className='shrink-0'
+                />
                 support@tenantcounselnetwork.com
             </div>
             <div className='mt-10'>

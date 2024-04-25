@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import ContactUsButton from './ContactUsButton'
 import logo from './../assets/logo.png'
 import { Link } from 'react-router-dom'
@@ -9,9 +9,51 @@ const Navbar = () => {
     const toggleMobileMenu = () => {
         setMobileMenuOpen(!isMobileMenuOpen);
     };
+
+    useEffect(() => {
+        if (isMobileMenuOpen) {
+            document.body.style.overflow = 'hidden';
+        } else {
+            document.body.style.overflow = 'unset';
+        }
+    }, [isMobileMenuOpen]);
+
+    useEffect(() => {
+        const handleResize = () => {
+            if (window.innerWidth >= 768) {
+                setMobileMenuOpen(false);
+            }
+        };
+
+        window.addEventListener('resize', handleResize);
+
+        return () => {
+            window.removeEventListener('resize', handleResize);
+        };
+    }, []);
+
+    useEffect(() => {
+        const handleOutsideClick = (event) => {
+            if (isMobileMenuOpen && !menuRef.current.contains(event.target)) {
+                setMobileMenuOpen(false);
+            }
+        };
+
+        document.addEventListener('mousedown', handleOutsideClick);
+
+        return () => {
+            document.removeEventListener('mousedown', handleOutsideClick);
+        };
+    }, [isMobileMenuOpen]);
+
+    const menuRef = useRef(null);
+
+
     return (
         <header className="bg-white shadow sticky top-0 z-30 inset-x-0">
-            <nav className='flex justify-between px-10 py-2' >
+            <nav className='flex justify-between px-10 py-2'
+                ref={menuRef}
+            >
                 <Link to={'/'} className='flex items-center w-16 h-16 sm:w-20 sm:h-20 '>
                     <img src={logo} alt="logo" className='w-full h-full' />
                 </Link>
@@ -57,6 +99,7 @@ const Navbar = () => {
             <MobileMenu
                 isMobileMenuOpen={isMobileMenuOpen}
                 toggleMobileMenu={toggleMobileMenu}
+
             />
         </header>
 
@@ -65,11 +108,12 @@ const Navbar = () => {
 
 export default Navbar
 
-const MobileMenu = ({ isMobileMenuOpen, toggleMobileMenu }) => {
+const MobileMenu = ({ isMobileMenuOpen, toggleMobileMenu, menuRef }) => {
     return (
         <AnimatePresence>
             {isMobileMenuOpen && (
                 <motion.div
+
                     className="fixed inset-x-0 bg-white z-10"
                     initial={{ opacity: 0, y: -100 }}
                     animate={{ opacity: 1, y: 0 }}
