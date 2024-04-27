@@ -1,62 +1,72 @@
 import { useToast } from "@/components/ui/use-toast"
+import { useRef } from "react"
+import emailjs from '@emailjs/browser';
+
 const Form = () => {
+    const form = useRef();
     const { toast } = useToast()
-    const onSubmit = async (event) => {
-        event.preventDefault();
-        const formData = new FormData(event.target);
+    const public_key = import.meta.env.VITE_PUBLIC_KEY;
+    const service_id = import.meta.env.VITE_SERVICE_ID;
+    const template_id = import.meta.env.VITE_TEMPLATE_ID;
+    const sendEmail = (e) => {
+        e.preventDefault();
 
-        formData.append("access_key", "5f634db9-51a6-4da7-b10a-80ba2f2f60de");
-
-        const object = Object.fromEntries(formData);
-        const json = JSON.stringify(object);
-        console.log('form', json);
-        const res = await fetch("https://api.web3forms.com/submit", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json",
-                Accept: "application/json"
-            },
-            body: json
-        }).then((res) => res.json());
-
-        if (res.success) {
-
-            toast({
-                title: "Thank you for contacting us",
-                description: "We have received your message and will get back to you shortly!",
-                type: "success"
-            });
-        }
+        emailjs
+            .sendForm(service_id, template_id, form.current, {
+                publicKey: public_key,
+            })
+            .then(
+                () => {
+                    console.log('SUCCESS!');
+                    form.current.reset();
+                    toast({
+                        title: 'Email sent successfully',
+                        status: 'success',
+                        duration: 5000,
+                        isClosable: true,
+                    });
+                },
+                (error) => {
+                    console.log('FAILED...', error.text);
+                    toast({
+                        title: 'Email failed to send',
+                        status: 'error',
+                        duration: 5000,
+                        isClosable: true,
+                    });
+                },
+            );
     };
     return (
         <div>
             <form
-                onSubmit={onSubmit}
+                ref={form}
+                onSubmit={sendEmail}
             >
                 <div className='flex flex-col space-y-5'>
                     <div className='flex flex-col'>
-                        <label id='name' >Name</label>
+                        <label id='user_name' >Name</label>
                         <input
                             required
-                            name="name"
+                            name="user_name"
                             type='text'
                             className='border-b border-gray-300 p-2 outline-none'
                         />
                     </div>
                     <div className='flex flex-col'>
-                        <label id='phone' >Phone Number</label>
+                        <label id='user_phone' >Phone Number</label>
                         <input
                             required
                             type='phone'
-                            name="phone"
+                            name="user_phone"
                             className='border-b border-gray-300 p-2 outline-none'
                         />
                     </div>
                     <div className='flex flex-col'>
-                        <label id='email' >Email</label>
+                        <label id='user_email' >Email</label>
                         <input
                             required
-                            name="email"
+                            name="user_email"
                             type='email'
                             className='border-b border-gray-300 p-2 outline-none'
                         />

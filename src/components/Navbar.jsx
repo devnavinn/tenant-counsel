@@ -140,7 +140,7 @@ const MobileMenu = ({ isMobileMenuOpen, toggleMobileMenu, menuRef }) => {
                             <li
                                 onClick={toggleMobileMenu}
                             >
-                                <Link to={'/tenant-right'} className='hover:text-blue-500 p-4'>Tenant Right</Link>
+                                <Link to={'/tenant-right'} className='hover:text-blue-500 p-4'>Tenant Rights</Link>
 
                             </li>
                             <li
