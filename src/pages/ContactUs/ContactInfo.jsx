@@ -35,12 +35,11 @@ const ContactInfo = () => {
                 +1 (917) 277-3509
             </a>
 
-            <div className='flex items-center gap-2 text-[#C9C9C9]'>
-                <Mail
-                    className='shrink-0'
-                />
+            <a href='mailto:support@tenantcounselnetwork.com' className='flex items-center gap-2 text-[#C9C9C9] z-20'>
+                <Mail class='shrink-0' />
                 support@tenantcounselnetwork.com
-            </div>
+            </a>
+
             <div className='mt-10'>
                 <h1 className=' text-2xl md:text-4xl font-semibold text-[#FFFFFF] '>Refer us to a friend!</h1>
                 <p className='text-[#C9C9C9] py-5'>Reach out to us today – because your home is worth fighting for, and we're here to stand with you every step of the way. Contact us now to secure the legal defense you deserve.</p>
