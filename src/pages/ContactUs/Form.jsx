@@ -1,6 +1,7 @@
 import { useToast } from "@/components/ui/use-toast"
 import { useRef } from "react"
 import emailjs from '@emailjs/browser';
+import { Description } from "@radix-ui/react-toast";
 
 const Form = () => {
     const form = useRef();
@@ -21,7 +22,7 @@ const Form = () => {
                     form.current.reset();
                     toast({
                         title: 'Email sent successfully',
-                        status: 'success',
+                        Description: "Thank you for reaching out! , We will get back to you soon.",
                         duration: 5000,
                         isClosable: true,
                     });
