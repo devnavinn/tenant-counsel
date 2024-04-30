@@ -4,7 +4,11 @@ import Demo from "../components/Demo"
 import Support from "../components/Support"
 import Help from "../components/Help"
 import { Helmet } from "react-helmet"
+import { useEffect } from "react"
 const Home = () => {
+    useEffect(() => {
+        window.scrollTo(0, 0)
+    }, [])
     return (
         <section
             className="overflow-hidden"
