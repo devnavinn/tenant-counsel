@@ -111,52 +111,36 @@ const Navbar = () => {
 
 export default Navbar
 
-const MobileMenu = ({ isMobileMenuOpen, toggleMobileMenu, menuRef }) => {
-
+const MobileMenu = ({ isMobileMenuOpen, toggleMobileMenu }) => {
     return (
         <AnimatePresence>
             {isMobileMenuOpen && (
                 <motion.div
-
-                    className="fixed inset-x-0 bg-white z-10"
-                    initial={{ opacity: 0, y: -100 }}
+                    className="fixed inset-0 bg-white z-10 overflow-y-auto"
+                    initial={{ opacity: 0, y: "100%" }}
                     animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0, y: -100 }}
-                    transition={{ duration: 0.3, ease: 'easeInOut' }}
+                    exit={{ opacity: 0, y: "100%" }}
+                    transition={{ duration: 0.3, ease: "easeInOut" }}
                 >
                     <div className="p-4">
                         <ul className='flex flex-col items-center space-y-5 p-4'>
-                            <li
-                                onClick={toggleMobileMenu}
-                            >
+                            <li onClick={toggleMobileMenu}>
                                 <Link to={'/'} className='hover:text-blue-500 p-4'>Home</Link>
                             </li>
-                            <li
-                                onClick={toggleMobileMenu}
-                            >
+                            <li onClick={toggleMobileMenu}>
                                 <Link to={'/resources-and-news'} className='hover:text-blue-500 p-4'>Resources</Link>
-
                             </li>
-                            <li
-                                onClick={toggleMobileMenu}
-                            >
+                            <li onClick={toggleMobileMenu}>
                                 <Link to={'/tenant-right'} className='hover:text-blue-500 p-4'>Tenant Rights</Link>
-
                             </li>
-                            <li
-                                onClick={toggleMobileMenu}
-                            >
-                                <ContactUsButton
-                                    buttonName={'Contact Us'}
-                                    link={'/contact-us'}
-                                />
+                            <li onClick={toggleMobileMenu}>
+                                <ContactUsButton buttonName={'Contact Us'} link={'/contact-us'} />
                             </li>
                         </ul>
                     </div>
-
-
                 </motion.div>
             )}
         </AnimatePresence>
     );
 };
+
