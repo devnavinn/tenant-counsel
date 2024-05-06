@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import img from '../../assets/news/img2.png'
+import img from '../../assets/news/img2.jpg'
 const News2 = () => {
     return (
         <motion.div className="max-h-screen   flex justify-center items-center overflow-hidden"

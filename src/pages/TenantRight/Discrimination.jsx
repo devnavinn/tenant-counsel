@@ -1,5 +1,5 @@
 import React from 'react';
-import img from '../../assets/tenant-right/img2.png';
+import img from '../../assets/tenant-right/img2.jpg';
 import icon from '../../assets/tenant-right/icon2.png';
 import pattern from '../../assets/pattern.png';
 import { motion } from 'framer-motion';

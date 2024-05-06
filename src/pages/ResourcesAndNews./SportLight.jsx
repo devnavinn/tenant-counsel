@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import img from '../../assets/news/img1.png'
+import img from '../../assets/news/img1.jpg'
 const SportLight = () => {
     return (
         <motion.div

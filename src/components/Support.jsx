@@ -1,5 +1,5 @@
 import React from 'react'
-import support from '../assets/bg-support.png'
+import support from '../assets/bg-support.jpg'
 import { CircleCheck } from 'lucide-react'
 import { supportInfo } from '../constants'
 import { motion } from 'framer-motion'

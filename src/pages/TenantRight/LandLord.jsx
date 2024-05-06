@@ -1,4 +1,4 @@
-import img from '../../assets/tenant-right/img4.png';
+import img from '../../assets/tenant-right/img4.jpg';
 import icon from '../../assets/tenant-right/icon4.png';
 import pattern from '../../assets/pattern.png';
 import List from './List';

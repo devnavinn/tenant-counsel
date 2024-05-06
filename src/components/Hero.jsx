@@ -1,4 +1,4 @@
-import heroImg from '../assets/hero-img.png';
+import heroImg from '../assets/hero-img.jpg';
 import shapeHero from '../assets/shape-hero.svg';
 import shapeHero2 from '../assets/shape-hero2.png';
 import { motion } from "framer-motion";

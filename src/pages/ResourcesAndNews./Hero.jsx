@@ -1,4 +1,4 @@
-import heroImg from '../../assets/news/hero.jpeg'
+import heroImg from '../../assets/news/hero.jpg'
 import shapeHero from '../../assets/tenright-hs.png'
 import { motion } from "framer-motion";
 const Hero = () => {
@@ -11,10 +11,6 @@ const Hero = () => {
                 style={{
                     backgroundImage: `url(${heroImg})`,
                 }}
-            />
-            <div
-                className='absolute inset-0 bg-black bg-opacity-50 '
-
             />
             <div
                 className='absolute inset-0 -z-0 bg-no-repeat bg-contain'

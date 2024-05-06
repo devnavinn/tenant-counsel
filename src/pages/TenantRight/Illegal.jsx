@@ -1,4 +1,4 @@
-import img1 from '../../assets/tenant-right/img1.png'
+import img1 from '../../assets/tenant-right/img1.jpg'
 import icon1 from '../../assets/tenant-right/icon1.png'
 import pattern from '../../assets/pattern.png'
 import { motion } from 'framer-motion'

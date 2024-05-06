@@ -1,5 +1,5 @@
 
-import img from '../../assets/news/img3.png'
+import img from '../../assets/news/img3.jpg'
 import { motion } from 'framer-motion'
 const News3 = () => {
     return (
